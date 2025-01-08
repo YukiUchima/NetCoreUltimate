@@ -46,14 +46,13 @@ app.Use(async (HttpContext context, RequestDelegate next) =>
     await next(context);
 });
 
+app.UseHelloCustomMiddleware();
 
 app.Use(async (HttpContext context, RequestDelegate next) =>
 {
     await context.Response.WriteAsync("\nMiddleware 3 is running!");
-    next(context);
 });
 
-app.UseMyCustomMiddleware();
 
 
 app.Run();
