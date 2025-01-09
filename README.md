@@ -9,4 +9,5 @@
 	
 	# Scaffold database using CLI
 	$ efcpt "Server=localhost;Database=<db-name>;User id=<id>;Pwd=<password>;Encrypt=false" mssql
+
 ```
